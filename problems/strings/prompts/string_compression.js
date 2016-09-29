@@ -11,7 +11,33 @@
 
 
 const stringCompression = string => {
-  // TODO: Your code here
+  let arr = string.split('');
+  let str = '';
+  let obj = {};
+  arr.forEach((letter, index, list) => {
+    if(letter === list[index +1]){
+      if (obj.hasOwnProperty(letter)){
+        obj[letter] += 1;
+      } else {
+        obj[letter] = 1;
+      }
+    } else {
+      if (obj.hasOwnProperty(letter)){
+        obj[letter] += 1;
+      } else {
+        obj[letter] = 1;
+      }
+      str += letter+obj[letter].toString();
+      obj = {};
+    }
+  });
+  if(string.length < str.length){
+    return string;
+  } else {
+    return str;
+  }
 };
 
+console.log(stringCompression('aabcccccaaa'))
+console.log(stringCompression('bbbccfffd'))
 module.exports = { stringCompression };

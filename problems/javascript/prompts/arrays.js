@@ -11,27 +11,27 @@ module.exports = {
 
 
   // predict what ["A", "B", "C"].join() will return
-  join: "ABC",
+  join: "A,B,C",
 
 
   // predict what ["A", "B", "C"].push("D") will return
-  push: ["A", "B", "C", "D"],
+  push: 4,
 
 
   // predict what ["A", "B", "C"].pop() will return
-  pop: ["A", "B"],
+  pop: "C",
 
 
   // predict what ["A", "B", "C"].shift() will return
-  shift: ["B", "C"],
+  shift: "A",
 
 
   // predict what ["A", "B", "C"].unshift("X") will return
-  unshift: ["X","A","B","C"],
+  unshift: 4,
 
 
   // predict what ["one","two", "three", "four"].slice(0,2) will return
-  slice1: ["one","two", "three"],
+  slice1: ["one","two"],
 
 
   // predict what ["one","two", "three", "four"].slice(0) will return
@@ -43,7 +43,7 @@ module.exports = {
 
 
   // predict what ["one","two", "three", "four"].splice(1, 2, 3, 4) will return
-  splice: ["one", 3, 4, "four"],
+  splice: ["two","three"],
 
 
   // predict what ["one","two", "three", "four"].reverse() will return
@@ -55,7 +55,7 @@ module.exports = {
 
 
   // predict what [1, 9, 3, 100, 800, 20].sort() will return
-  sort2: [1,3,9,20,100,800],
+  sort2: [1,100,20,3,800,9],
 
 
   // predict what ["A", "B", "X", "Z"].indexOf("X") will return

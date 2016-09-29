@@ -13,7 +13,11 @@
   */
 
 const isPalindrome = (string) => {
-  // TODO: your code here!
-}
+  if (string === string.split('').reverse().join('')){
+    return true;
+  } else {
+    return false;
+  }
+};
 
 module.exports = { isPalindrome }

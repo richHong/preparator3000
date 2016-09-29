@@ -18,7 +18,7 @@ setTimeout(()=> {
 }, 200);
 */
 
-async1: REPLACE_ME,
+async1: 39,
 
 /*
 let async2 = 0;
@@ -31,6 +31,6 @@ setTimeout(()=> {
 }, 200);
 */
 
-async2: REPLACE_ME
+async2: 33
 
 };

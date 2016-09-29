@@ -6,25 +6,25 @@ const REPLACE_ME = null;
 
 module.exports = {
 	// predict the result calling Math.pow(7, 2)
-	pow: REPLACE_ME,
+	pow: 49,
 
 
 	// predict the result calling Math.round(2.01)
-	round1: REPLACE_ME,
+	round1: 2,
 
 
 	// predict the result calling Math.round(13.5)
-	round2: REPLACE_ME,
+	round2: 14,
 
 
 	// predict the result calling Math.floor(13.95)
-	floor: REPLACE_ME,
+	floor: 13,
 
 
 	// predict the result calling Math.ceil(1.45)
-	ceil: REPLACE_ME,
+	ceil: 2,
 
 
 	// predict the result calling Math.sqrt(16)
-	sqrt: REPLACE_ME,
+	sqrt: 4,
 };

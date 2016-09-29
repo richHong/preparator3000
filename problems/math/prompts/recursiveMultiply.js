@@ -10,8 +10,19 @@
   * recursiveMultiply(2, 4) // 8
   */
 
-const recursiveMultiply = (num1, num2) => {
-  // TODO: Implement recursive multiply
+const recursiveMultiply = (num1, num2, total) => {
+  if (!total){
+    total = 0;
+  }
+  if (num1 > 0){
+    total += num2;
+    num1 -= 1;
+    return recursiveMultiply(num1, num2, total);
+  } else {
+    return total;
+  }
 };
+
+var answer = recursiveMultiply(2,3);
 
 module.exports = { recursiveMultiply };

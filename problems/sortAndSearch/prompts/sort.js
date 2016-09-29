@@ -8,6 +8,18 @@
 
 const sort = numbers => {
   // TODO: Implement sort here
-}
+  let length = numbers.length;
+  while (length){
+    for(var i = 0; i < numbers.length; i++){
+      if(numbers[i] > numbers[i+1]){
+        var temp = numbers[i];
+        numbers[i] = numbers[i+1];
+        numbers[i+1] = temp;
+      }
+    }
+    length--;
+  }
+  return numbers;
+};
 
 module.exports = { sort };

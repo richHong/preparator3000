@@ -11,7 +11,11 @@
   */
 
 const stringPermutation = function(string1, string2) {
-
+  if (string1.split('').sort().join('') === string2.split('').sort().join('')){
+    return true;
+  } else {
+    return false;
+  }
 };
-
+console.log(stringPermutation('babel', 'lebab'))
 module.exports = { stringPermutation };

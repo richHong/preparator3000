@@ -29,7 +29,7 @@ module.exports = {
 	console.log(value);
 	*/
 
-	value: REPLACE_ME,
+	value: 0,
 
 	/*
 	var foo = () => {
@@ -41,6 +41,6 @@ module.exports = {
 	console.log(foo()());
 	*/
 
-	doubleFoo: REPLACE_ME,
+	doubleFoo: 15,
 
 };

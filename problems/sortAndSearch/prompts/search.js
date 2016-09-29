@@ -16,9 +16,9 @@ const searchIterative = (nums, k) => {
     if (num === k){
       result = i;
     } 
-  })
+  });
   return result;
-}
+};
 
 const searchRecursive = (nums, k, i = 0) => {
   if (nums[i] === k){
@@ -26,7 +26,7 @@ const searchRecursive = (nums, k, i = 0) => {
   } else if (i === nums.length){
     return -1;
   } else {
-    return searchRecursive(nums, k, i+1)
+    return searchRecursive(nums, k, i+1);
   }
 }
 

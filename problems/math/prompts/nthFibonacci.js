@@ -22,7 +22,7 @@
  */
 
 const nthFibonacci = n => {
-  // TODO: implement me!
+  return n <= 1 ? 1 : nthFibonacci(n-1) + nthFibonacci(n-2);
 };
 
 module.exports = { nthFibonacci };

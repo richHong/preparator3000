@@ -31,7 +31,7 @@ const stringCompression = string => {
       obj = {};
     }
   });
-  if(string.length < str.length){
+  if(string.length <= str.length){
     return string;
   } else {
     return str;

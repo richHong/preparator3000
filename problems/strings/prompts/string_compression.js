@@ -38,6 +38,4 @@ const stringCompression = string => {
   }
 };
 
-console.log(stringCompression('aabcccccaaa'))
-console.log(stringCompression('bbbccfffd'))
 module.exports = { stringCompression };

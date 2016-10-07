@@ -16,8 +16,27 @@
   * Return true, as 3->1->9 = 13
   */
 
-const pathSum = () => {
-  // your code here
+const pathSum = (root, sum) => {
+
+  var result = false;
+
+  function subroutine (node, total){
+    if (!node.left && !node.right){
+      if (total === sum){
+        result = true;
+      }
+    }
+    if (node.right){
+      subroutine(node.right, total + node.right.value);
+    }
+    if (node.left){
+      subroutine(node.left, total + node.left.value);
+    }
+  }
+
+  subroutine(root, root.value);
+  
+  return result;
 };
 
 module.exports = { pathSum };

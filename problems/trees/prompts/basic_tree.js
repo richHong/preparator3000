@@ -8,15 +8,34 @@
 
 class Tree {
   constructor(val) {
-    // TODO: Implement tree
+    // super();
+    this.value = val;
+    this.children = [];
   }
 
-  addChild() {
-    // TODO: Add ability to add children
+  addChild(val) {
+    let newTree = new Tree(val);
+    this.children.push(newTree);
   }
 
-  contains() {
-    // TODO: Add ability to check if value is contained within tree
+  contains(val) {
+
+    var found = false;
+
+    function subroutine(node) {  
+      if (node.value === val){
+        found = true;
+      } 
+      if (node.children.length > 0) {
+        node.children.forEach( child => {
+          subroutine(child);
+        });
+      }
+    }
+
+    subroutine(this);
+
+    return found;
   }
 };
 

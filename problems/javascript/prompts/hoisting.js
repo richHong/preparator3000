@@ -36,7 +36,7 @@ module.exports = {
 	console.log(bar);
 	*/
 
-	bar: undefined,
+	bar: "undefined",
 
 	/*
 	var foo = bar(10);

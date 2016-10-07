@@ -8,7 +8,6 @@
 
 class Tree {
   constructor(val) {
-    // super();
     this.value = val;
     this.children = [];
   }

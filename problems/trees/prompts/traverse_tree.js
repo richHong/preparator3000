@@ -20,11 +20,55 @@
   */
 
 const flattenTreeBreadthFirst = (tree) => {
-  // TODO: Implement Breadth first approach
+  var result = [];
+  var obj = {};
+  var maxDepth = 0;
+
+  function subroutine (node, depth) {
+
+    obj[depth] = obj[depth] || [];
+    
+    if (depth > maxDepth) {
+      maxDepth = depth;
+    }
+
+    obj[depth].push(node.value);
+
+    if (node.children.length){
+      node.children.forEach( child => {
+        subroutine(child, depth+1);
+      });
+    }  
+  }
+
+  subroutine(tree, 0);
+
+  for (var i = 0; i <= maxDepth; i++) {
+
+    result = result.concat(obj[i]);
+
+  }
+
+  return result;
+
 };
 
 const flattenTreeDepthFirst = (tree) => {
-  // TODO: Implement Depth first approach
+  var result = [];
+
+  function subroutine(node) {
+    result.push(node.value);
+
+    if (node.children.length){
+      node.children.forEach( child => {
+        subroutine(child);
+      });
+    }
+  }
+
+  subroutine(tree);
+
+  return result;
 };
 
 module.exports = {

@@ -15,22 +15,22 @@
 
 class Stack {
   constructor() {
-    // TODO: Implement constructor
+    this.storage = [];
   }
 
   // Push will add an element to the stack
-  push() {
-    // TODO: Implement push method
+  push(val) {
+    this.storage.push(val);
   }
 
   // Pop will remove an element from the stack and return that element
   pop() {
-    // TODO: Implement pop method
+    return this.storage.pop();
   }
 
   // Size returns the size of the stack
   size() {
-    // TODO: Implement size method
+    return this.storage.length;
   }
 }
 

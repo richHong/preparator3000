@@ -15,22 +15,22 @@
 
 class Queue {
   constructor() {
-    // TODO: Implement constructor
+    this.storage = [];
   }
 
   // Enqueue will add an element to the queue
-  enqueue() {
-    // TODO: Implement enqueue method
+  enqueue(val) {
+    this.storage.push(val);
   }
 
   // Dequeue will remove an element from the queue and return that element
   dequeue() {
-    // TODO: Implement dequeue method
+    return this.storage.shift();
   }
 
   // Size returns the size of the queue
   size() {
-    // TODO: Implement size method
+    return this.storage.length;
   }
 }
 

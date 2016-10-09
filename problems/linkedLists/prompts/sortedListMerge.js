@@ -21,7 +21,6 @@ const sortedListMerge = (node1, node2) => {
     node2 = node2.next;
   }
   
-
   function merger(list, nod1, nod2){
     if(nod1 !== null && nod2 !== null){
       if(nod1.value < nod2.value){
@@ -34,7 +33,7 @@ const sortedListMerge = (node1, node2) => {
     } else if (nod2 === null && nod1 !== null) {
       list.next = nod1;
       if(nod1.next === null){
-        list.tail = nod1;
+        newList.tail = nod1;
         list.next.next = null;
       } else {
         merger(list.next, nod1.next, nod2);
@@ -42,7 +41,7 @@ const sortedListMerge = (node1, node2) => {
     } else if (nod1 === null && nod2 !== null) {
       list.next = nod2;
       if (nod2.next === null){
-        list.tail = nod1;
+        newList.tail = nod1;
         list.next.next = null;
       } else {
         merger(list.next, nod1, nod2.next);

@@ -64,5 +64,5 @@ const robotPaths = (n) => {
 
   return counter;
 };
-console.log(robotPaths(4));
+
 module.exports = { robotPaths };

@@ -15,7 +15,16 @@
  */
 
 const hasCycle = linkedList => {
-  // TODO: Implement linked 
+  var fast = linkedList.head;
+  var slow = linkedList.head;
+  var pause = true;
+
+  while (fast = fast.next) {
+    if (fast === slow) { return true; }
+    if (!pause) { slow = slow.next; }  
+    pause = !pause;
+  }
+  return false;
 };
 
 module.exports = { hasCycle };

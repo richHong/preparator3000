@@ -17,5 +17,5 @@ const stringPermutation = function(string1, string2) {
     return false;
   }
 };
-console.log(stringPermutation('babel', 'lebab'))
+
 module.exports = { stringPermutation };

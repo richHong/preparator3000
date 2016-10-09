@@ -11,43 +11,48 @@
  */
 
 const sortedListMerge = (node1, node2) => {
-  let newList = {};
-      newList.head = null;
+  var newList = {};
+  
+  if(node1.value < node2.value){
+    newList.head = node1;
+    node1 = node1.next;
+  } else {
+    newList.head = node2;
+    node2 = node2.next;
+  }
+  
 
-  function merger(list, curNode1, curNode2){
-    if (list.head === null){
-      if (curNode1.value < curNode2.value){
-        list.head = curNode1;
-        if(curNode1.next){
-          merger(list.head, curNode1.next, curNode2);
-        }
+  function merger(list, nod1, nod2){
+    if(nod1 !== null && nod2 !== null){
+      if(nod1.value < nod2.value){
+        list.next = nod1;
+        merger(list.next, nod1.next, nod2);
       } else {
-        list.head = curNode2;
-        if (curNode2.next){
-          merger(list.head, curNode1, curNode2.next);
-        }
+        list.next = nod2;
+        merger(list.next, nod1, nod2.next);
+      } 
+    } else if (nod2 === null && nod1 !== null) {
+      list.next = nod1;
+      if(nod1.next === null){
+        list.tail = nod1;
+        list.next.next = null;
+      } else {
+        merger(list.next, nod1.next, nod2);
+      }
+    } else if (nod1 === null && nod2 !== null) {
+      list.next = nod2;
+      if (nod2.next === null){
+        list.tail = nod1;
+        list.next.next = null;
+      } else {
+        merger(list.next, nod1, nod2.next);
       }
     } else {
-      if (curNode1.value < curNode2.value){
-        list.next = curNode1;
-        if (curNode1.next){
-          merger(list.next, curNode2, curNode1.next);
-        } else if (curNode2.next){
-          merger(list.next, curNode1, curNode2.next);
-        } 
-      } else {
-        list.next = curNode2;
-        if (curNode2.next) {
-          merger(list.next, curNode1, curNode2.next);
-        } else if (curNode1.next){
-          merger(list.next, curNode2, curNode1.next);
-        }  
-      }
+      return;
     }
   }
 
-  merger(newList, node1, node2);
-
+  merger(newList.head, node1, node2);
   return newList.head;
 };
 
